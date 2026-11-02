@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U.S. Midterms 2026 — Dashboard, 2 November 2026</title><style>
+:root{--ink:#0d1526;--paper:#f5f7fa;--card:#fff;--line:#e3e7ef;--muted:#64748b;--dem:#1d4ed8;--rep:#bf2020;--gold:#b7791f}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-feature-settings:"tnum"}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px 72px}
+header{background:linear-gradient(155deg,#080e1a 0%,#12203a 52%,#1a2e52 100%);color:#fff;padding:40px 0 34px;margin-bottom:30px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(29,78,216,.30),transparent 58%);pointer-events:none}
+header .wrap{padding-bottom:0;position:relative;z-index:1}
+.kicker{font-size:11.5px;letter-spacing:.19em;text-transform:uppercase;color:#8fb0e8;font-weight:700}
+h1{font-size:clamp(30px,5vw,42px);line-height:1.06;margin:10px 0 10px;letter-spacing:-.025em;font-weight:800}
+.sub{color:#b6c6e0;max-width:800px;font-size:14.5px;margin:0}
+.hero{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.hstat{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.13);border-radius:13px;padding:14px 16px;backdrop-filter:blur(4px)}
+.hstat .k{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#9db4d8;font-weight:700}
+.hstat .v{font-size:27px;font-weight:800;letter-spacing:-.02em;margin:5px 0 2px;font-variant-numeric:tabular-nums}
+.hstat .s{font-size:11.5px;color:#a3b6d4;line-height:1.35}
+h2{font-size:21px;margin:44px 0 6px;letter-spacing:-.015em;font-weight:800;display:flex;align-items:baseline;gap:10px}
+h2 .num{color:#a9b4c6;font-weight:700;font-size:13px;letter-spacing:.1em}
+h3{font-size:12.5px;margin:0 0 12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+.lede{color:#475569;margin:0 0 18px;max-width:880px;font-size:14.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:0 1px 2px rgba(16,24,40,.045)}
+.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.stack .card{margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);text-align:left;padding:9px 8px;border-bottom:1.5px solid var(--line);font-weight:800}
+td{padding:8px;border-bottom:1px solid #f1f4f9;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fafbfe}
+.num{text-align:right;font-variant-numeric:tabular-nums}.ctr{text-align:center}
+.pl{font-weight:650}.sm{font-size:12px;color:var(--muted)}
+.d{color:var(--dem)}.r{color:var(--rep)}.g{color:var(--gold)}
+.pill{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:20px;background:#eef2f9;color:#334155;letter-spacing:.02em}
+.pill.d{background:#e7edfd;color:var(--dem)}.pill.r{background:#fbeaea;color:var(--rep)}.pill.t{background:#fdf0d8;color:#8a5a10}
+.chart{width:100%;height:auto;display:block;margin-top:4px}
+.gl{stroke:#edf0f6;stroke-width:1}.zl{stroke:#d9c39a;stroke-dasharray:4 4;stroke-width:1.2}
+.line{fill:none;stroke:var(--dem);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.line2{fill:none;stroke:var(--gold);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:0}
+.dot{fill:#fff;stroke:var(--dem);stroke-width:2.4}.dot2{fill:#fff;stroke:var(--gold);stroke-width:2.2}
+.ax{font-size:10px;fill:#94a3b8}.endlab{font-size:11px;fill:var(--dem);font-weight:800}.endlab2{font-size:11px;fill:var(--gold);font-weight:800}
+.bar{display:inline-block;width:70px;height:6px;background:#eef1f6;border-radius:4px;overflow:hidden;vertical-align:middle;margin-right:8px}
+.bar span{display:block;height:100%;border-radius:4px}
+.callout{border-left:4px solid var(--dem);background:#f2f6ff;padding:14px 18px;border-radius:0 10px 10px 0;font-size:13.5px;color:#1e3a8a;margin:18px 0}
+.callout.warn{border-color:var(--gold);background:#fffbeb;color:#78350f}
+.callout b{font-weight:800}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:13.5px}
+.kv dt{color:var(--muted);font-weight:600}.kv dd{margin:0;font-weight:650}
+footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.7}
+a{color:var(--dem);text-decoration:none;border-bottom:1px solid rgba(29,78,216,.25)}
+.flag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a5a10;background:#fdf0d8;border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:1px}
+@media(max-width:880px){.hero{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}h1{font-size:30px}}
+@media print{body{background:#fff;font-size:11px}.wrap{max-width:none;padding:0}header{background:#12203a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:22px 0}
+h2{margin-top:22px;page-break-after:avoid}.card{box-shadow:none;page-break-inside:avoid}table{font-size:9.5px}td,th{padding:4px 5px}
+@page{size:A4;margin:12mm}}
+
+.hstat{background:#fff;border:1px solid var(--line);border-radius:12px}
+.hstat .k{color:var(--muted)}.hstat .v{color:var(--ink)}.hstat .s{color:var(--muted)}
+.doc .hstat .v{font-size:26px}
+section{page-break-inside:auto}
+</style></head><body>
+<header><div class="wrap">
+<div class="kicker">Election desk &middot; 1 day to Election Day &middot; final edition</div>
+<h1>2026 Midterm Monitor</h1>
+<p class="sub">Every figure we could verify for the House, Senate, governorships and state legislatures &mdash;
+individual surveys, five independent polling averages, and the probability each chamber changes hands.
+Data cut-off <b>Monday, November 2, 2026</b>; election <b>Tuesday, November 3, 2026</b>.</p>
+<div class="hero doc">
+<div class="hstat"><div class="k">Generic ballot</div><div class="v">D+9.0</div><div class="s">Central estimate &middot; range D+7.8 to D+12.0</div></div>
+<div class="hstat"><div class="k">House</div><div class="v">83&ndash;98% D</div><div class="s">235.8 seats projected (+21)</div></div>
+<div class="hstat"><div class="k">Senate</div><div class="v">59&ndash;88% D</div><div class="s">51.3 seats central; 47&ndash;56 range</div></div>
+<div class="hstat"><div class="k">Governors</div><div class="v">25&ndash;25</div><div class="s">5 flips; no majority either way</div></div>
+</div></div></header>
+<div class="wrap">
+
+<h2><span class="num">01</span>How the forecast moved</h2>
+<p class="lede">Thirty days of daily published probabilities. The House eased from 86% to 83% in the final week. The
+Senate kept climbing to the close &mdash; 50% on 2 October to 59% today on Call the Map, and 83% to 88% on
+On Point in the last two days alone.</p>
+<div class="card"><svg class="chart" viewBox="0 0 800 278" role="img" aria-label="Daily Democratic control probability, House and Senate, October 2026">
+<defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4ed8" stop-opacity=".16"/><stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/></linearGradient></defs>
+<line x1="52" y1="203.8" x2="772" y2="203.8" class="gl"/><text x="42" y="206.8" class="ax" text-anchor="end">50</text><line x1="52" y1="159.3" x2="772" y2="159.3" class="gl"/><text x="42" y="162.3" class="ax" text-anchor="end">60</text><line x1="52" y1="114.9" x2="772" y2="114.9" class="gl"/><text x="42" y="117.9" class="ax" text-anchor="end">70</text><line x1="52" y1="70.4" x2="772" y2="70.4" class="gl"/><text x="42" y="73.4" class="ax" text-anchor="end">80</text><line x1="52" y1="26.0" x2="772" y2="26.0" class="gl"/><text x="42" y="29.0" class="ax" text-anchor="end">90</text><line x1="52" y1="203.8" x2="772" y2="203.8" class="zl"/><text x="772" y="197.8" class="ax" text-anchor="end" fill="#b7791f">50% — majority line</text>
+<path d="M52.0,70.4 L75.2,70.4 L98.5,70.4 L121.7,70.4 L144.9,70.4 L168.1,74.9 L191.4,70.4 L214.6,70.4 L237.8,66.0 L261.0,66.0 L284.3,66.0 L307.5,66.0 L330.7,66.0 L353.9,66.0 L377.2,61.6 L400.4,61.6 L423.6,61.6 L446.8,61.6 L470.1,61.6 L493.3,61.6 L516.5,61.6 L539.7,48.2 L563.0,43.8 L586.2,48.2 L609.4,48.2 L632.6,48.2 L655.9,48.2 L679.1,57.1 L702.3,52.7 L725.5,48.2 L748.8,57.1 L772.0,57.1 L772,226 L52,226 Z" fill="url(#hg)" stroke="none"/>
+<path d="M52.0,70.4 L75.2,70.4 L98.5,70.4 L121.7,70.4 L144.9,70.4 L168.1,74.9 L191.4,70.4 L214.6,70.4 L237.8,66.0 L261.0,66.0 L284.3,66.0 L307.5,66.0 L330.7,66.0 L353.9,66.0 L377.2,61.6 L400.4,61.6 L423.6,61.6 L446.8,61.6 L470.1,61.6 L493.3,61.6 L516.5,61.6 L539.7,48.2 L563.0,43.8 L586.2,48.2 L609.4,48.2 L632.6,48.2 L655.9,48.2 L679.1,57.1 L702.3,52.7 L725.5,48.2 L748.8,57.1 L772.0,57.1" class="line"/>
+<path d="M52.0,199.3 L75.2,203.8 L98.5,199.3 L121.7,199.3 L144.9,194.9 L168.1,194.9 L191.4,186.0 L214.6,186.0 L237.8,186.0 L261.0,186.0 L284.3,186.0 L307.5,186.0 L330.7,181.6 L353.9,181.6 L377.2,181.6 L400.4,177.1 L423.6,177.1 L446.8,177.1 L470.1,177.1 L493.3,177.1 L516.5,177.1 L539.7,177.1 L563.0,181.6 L586.2,181.6 L609.4,181.6 L632.6,177.1 L655.9,181.6 L679.1,177.1 L702.3,172.7 L725.5,159.3 L748.8,168.2 L772.0,163.8" class="line2"/>
+<circle cx="772.0" cy="57.1" r="4" class="dot"/>
+<circle cx="772.0" cy="163.8" r="4" class="dot2"/>
+<text x="764.0" y="48.1" class="endlab" text-anchor="end">House 83%</text>
+<text x="764.0" y="154.8" class="endlab2" text-anchor="end">Senate 59%</text>
+<text x="52.0" y="242" class="ax" text-anchor="middle">10-01</text><text x="284.3" y="242" class="ax" text-anchor="middle">10-11</text><text x="539.7" y="242" class="ax" text-anchor="middle">10-22</text><text x="772.0" y="242" class="ax" text-anchor="middle">11-01</text>
+<g transform="translate(52,258)"><rect width="10" height="3" y="4" fill="#1d4ed8"/><text x="16" y="9" class="ax">House</text><rect x="72" width="10" height="3" y="4" fill="#b7791f"/><text x="88" y="9" class="ax">Senate</text></g>
+</svg></div>
+
+
+<h2><span class="num">02</span>Michigan and South Carolina &mdash; the last 48 hours</h2>
+<p class="lede">Two races moved more than any others in the final weekend, in opposite directions and for
+reasons that have almost nothing in common. One is a story about a candidate surviving a defection; the
+other is a story about a name losing its grip.</p>
+<div class="grid2">
+<div class="card"><h3>Michigan &mdash; Chaos didn't dent him</h3>
+<table><tbody><tr><td class="pl">Trajectory</td><td class="num d"><b>D+2.4 → D+3.6</b></td><td class="sm">Call the Map average, 19 Oct to 1 Nov</td></tr><tr><td class="pl">Newest poll</td><td class="num d"><b>NYT / Siena, 1 Nov</b></td><td class="sm">El-Sayed 52.6 · Rogers 41.6 — D+11</td></tr><tr><td class="pl">On Point model</td><td class="num d"><b>95% El-Sayed</b></td><td class="sm">D+8.7 projected; 80% range D+2.2 to D+15.4</td></tr><tr><td class="pl">Kalshi</td><td class="num d"><b>76% El-Sayed</b></td><td class="sm">Up from 68% on 27 Oct</td></tr><tr><td class="pl">Governor</td><td class="num d"><b>Benson 92%</b></td><td class="sm">Kalshi; Call the Map D+6.6</td></tr></tbody></table>
+<p class="sm" style="margin-top:12px">On Sunday, Representative Haley Stevens &mdash; who lost the Democratic
+primary to El-Sayed &mdash; endorsed Republican Mike Rogers and appeared with him. It was the most
+disruptive single event of the final week for either party, and it is not visible in the numbers:
+El-Sayed's average rose every day this week.</p></div>
+<div class="card"><h3>South Carolina &mdash; Graham really is falling</h3>
+<table><tbody><tr><td class="pl">Trajectory</td><td class="num d"><b>R+4.5 → R+1.7</b></td><td class="sm">Call the Map average, 30 Oct to 1 Nov</td></tr><tr><td class="pl">On Point model</td><td class="num d"><b>Andrews D+0.9</b></td><td class="sm">53% chance — a Democratic flip</td></tr><tr><td class="pl">Kalshi</td><td class="num d"><b>Graham 72%</b></td><td class="sm">Barely moved; the widest market/model gap in the country</td></tr><tr><td class="pl">Poll mix</td><td class="num d"><b>4 of 15 counted are partisan</b></td><td class="sm">Trafalgar and Rasmussen both lean R</td></tr></tbody></table>
+<p class="sm" style="margin-top:12px">Graham was selected to replace her late brother on the ballot in a
+state Republicans have not lost statewide since 2006. The race has tightened 2.8 points in a week and is
+now inside the margin of error on two of the four models.</p></div>
+</div>
+<div class="grid2" style="margin-top:16px">
+<div class="card"><h3>Michigan Senate &mdash; latest polls</h3>
+<table><thead><tr><th>Pollster</th><th>Field</th><th>Sample</th><th class="num">D</th><th class="num">R</th><th class="num">Margin</th></tr></thead>
+<tbody><tr><td class="pl">NYT / Siena</td><td class="sm">Nov 1</td><td class="sm">1,011 LV</td><td class="num d">52.6</td><td class="num r">41.6</td><td class="num d"><b>D+11</b></td></tr><tr><td class="pl">YouGov</td><td class="sm">Oct 29</td><td class="sm">2,093 LV</td><td class="num d">51.0</td><td class="num r">47.0</td><td class="num d"><b>D+4</b></td></tr><tr><td class="pl">Rasmussen (R)</td><td class="sm">Oct 29</td><td class="sm">745 LV</td><td class="num d">49.0</td><td class="num r">44.0</td><td class="num d"><b>D+5</b></td></tr><tr><td class="pl">Mitchell Research</td><td class="sm">Oct 27</td><td class="sm">636 LV</td><td class="num d">51.0</td><td class="num r">44.0</td><td class="num d"><b>D+7</b></td></tr><tr><td class="pl">CNN / SSRS</td><td class="sm">Oct 27</td><td class="sm">768 LV</td><td class="num d">49.0</td><td class="num r">42.0</td><td class="num d"><b>D+7</b></td></tr><tr><td class="pl">Data for Progress</td><td class="sm">Oct 25</td><td class="sm">622 LV</td><td class="num d">50.0</td><td class="num r">46.0</td><td class="num d"><b>D+4</b></td></tr></tbody></table></div>
+<div class="card"><h3>South Carolina Senate &mdash; latest polls</h3>
+<table><thead><tr><th>Pollster</th><th>Field</th><th>Sample</th><th class="num">D</th><th class="num">R</th><th class="num">Margin</th></tr></thead>
+<tbody><tr><td class="pl">Patinkin Research (D)</td><td class="sm">Oct 29</td><td class="sm">500 LV</td><td class="num d">48.0</td><td class="num r">43.0</td><td class="num d"><b>D+5</b></td></tr><tr><td class="pl">NYT / Siena</td><td class="sm">Oct 26</td><td class="sm">707 LV</td><td class="num d">47.8</td><td class="num r">48.5</td><td class="num r"><b>R+0.7</b></td></tr><tr><td class="pl">The Citadel</td><td class="sm">Oct 25</td><td class="sm">890 LV</td><td class="num d">39.0</td><td class="num r">42.0</td><td class="num r"><b>R+3</b></td></tr><tr><td class="pl">Targoz</td><td class="sm">Oct 25</td><td class="sm">895 LV</td><td class="num d">46.0</td><td class="num r">47.0</td><td class="num r"><b>R+1</b></td></tr><tr><td class="pl">East Carolina</td><td class="sm">Oct 24</td><td class="sm">955 LV</td><td class="num d">47.3</td><td class="num r">51.2</td><td class="num r"><b>R+3.9</b></td></tr><tr><td class="pl">Impact Research (D)</td><td class="sm">Oct 21</td><td class="sm">800 LV</td><td class="num d">45.0</td><td class="num r">44.0</td><td class="num d"><b>D+1</b></td></tr></tbody></table></div>
+</div>
+<div class="callout warn"><b>The South Carolina market is the outlier of the entire cycle.</b> Kalshi still
+prices Graham at 72% while the On Point model makes Andrews a 53% favourite and the Call the Map average has
+the race inside two points. A 44-point gap between a market and a model, on a race that decides the Senate
+majority, is the single largest unresolved disagreement in this dataset.</div>
+
+<h2><span class="num">03</span>National generic ballot</h2>
+<p class="lede">The best single indicator for the House. Democrats set a cycle high of <b>D+9.2</b> in late October
+and have eased since, but every average still shows a lead of eight points or more. The spread between sources is
+about three points &mdash; mostly house-effect treatment, not new data.</p>
+<div class="stack">
+<div class="card"><h3>Most recent polls</h3>
+<table><thead><tr><th>Pollster</th><th>Field</th><th>Sample</th><th class="num">Dem</th><th class="num">Rep</th><th class="num">Margin</th></tr></thead>
+<tbody><tr><td class="pl">Tufts University / YouGov</td><td class="sm">10-27</td><td class="sm">499 LV</td><td class="num d">52</td><td class="num r">40</td><td class="num d"><b>D+12</b></td></tr>
+<tr><td class="pl">Harvard / HarrisX</td><td class="sm">10-26</td><td class="sm">— LV</td><td class="num d">52</td><td class="num r">48</td><td class="num d"><b>D+4</b></td></tr>
+<tr><td class="pl">The Economist / YouGov</td><td class="sm">10-26</td><td class="sm">1,123 LV</td><td class="num d">52</td><td class="num r">41</td><td class="num d"><b>D+11</b></td></tr>
+<tr><td class="pl">The Economist / YouGov<span class="flag">alternate version</span></td><td class="sm">10-26</td><td class="sm">1,430 RV</td><td class="num d">46</td><td class="num r">40</td><td class="num d"><b>D+6</b></td></tr>
+<tr><td class="pl">Reuters / Ipsos</td><td class="sm">10-26</td><td class="sm">1,164 LV</td><td class="num d">53</td><td class="num r">44</td><td class="num d"><b>D+9</b></td></tr>
+<tr><td class="pl">Reuters / Ipsos<span class="flag">alternate version</span></td><td class="sm">10-26</td><td class="sm">1,280 RV</td><td class="num d">50</td><td class="num r">41</td><td class="num d"><b>D+9</b></td></tr>
+<tr><td class="pl">NPR / PBS / Marist</td><td class="sm">10-26</td><td class="sm">— LV</td><td class="num d">52</td><td class="num r">44</td><td class="num d"><b>D+8</b></td></tr>
+<tr><td class="pl">NPR / PBS / Marist<span class="flag">alternate version</span></td><td class="sm">10-26</td><td class="sm">1,289 RV</td><td class="num d">52</td><td class="num r">42</td><td class="num d"><b>D+10</b></td></tr>
+<tr><td class="pl">Emerson College</td><td class="sm">10-26</td><td class="sm">1,000 LV</td><td class="num d">52</td><td class="num r">42</td><td class="num d"><b>D+10</b></td></tr>
+<tr><td class="pl">Leger</td><td class="sm">10-25</td><td class="sm">1,037 A</td><td class="num d">42</td><td class="num r">36</td><td class="num d"><b>D+6</b></td></tr>
+<tr><td class="pl">Cygnal (R)<span class="flag">partisan (R)</span></td><td class="sm">10-24</td><td class="sm">1,500 LV</td><td class="num d">52</td><td class="num r">43</td><td class="num d"><b>D+9</b></td></tr>
+<tr><td class="pl">CBS / YouGov</td><td class="sm">10-23</td><td class="sm">1,749 LV</td><td class="num d">53</td><td class="num r">45</td><td class="num d"><b>D+8</b></td></tr>
+<tr><td class="pl">Echelon Insights</td><td class="sm">10-23</td><td class="sm">3,644 LV</td><td class="num d">51</td><td class="num r">46</td><td class="num d"><b>D+5</b></td></tr>
+<tr><td class="pl">The Argument / Verasight</td><td class="sm">10-23</td><td class="sm">— LV</td><td class="num d">52</td><td class="num r">41</td><td class="num d"><b>D+11</b></td></tr>
+<tr><td class="pl">The Argument / Verasight<span class="flag">alternate version</span></td><td class="sm">10-23</td><td class="sm">1,549 RV</td><td class="num d">50</td><td class="num r">40</td><td class="num d"><b>D+10</b></td></tr>
+<tr><td class="pl">Prolific</td><td class="sm">10-22</td><td class="sm">1,518 A</td><td class="num d">52.6</td><td class="num r">41.9</td><td class="num d"><b>D+10.7</b></td></tr>
+<tr><td class="pl">Clarity Campaign Labs</td><td class="sm">10-21</td><td class="sm">1,016 LV</td><td class="num d">52</td><td class="num r">44</td><td class="num d"><b>D+8</b></td></tr>
+<tr><td class="pl">ActiVote</td><td class="sm">10-21</td><td class="sm">1,000 LV</td><td class="num d">53</td><td class="num r">47</td><td class="num d"><b>D+6</b></td></tr>
+<tr><td class="pl">The Economist / YouGov</td><td class="sm">10-20</td><td class="sm">1,179 LV</td><td class="num d">52</td><td class="num r">43</td><td class="num d"><b>D+9</b></td></tr>
+<tr><td class="pl">The Economist / YouGov<span class="flag">alternate version</span></td><td class="sm">10-20</td><td class="sm">1,496 RV</td><td class="num d">45</td><td class="num r">40</td><td class="num d"><b>D+5</b></td></tr>
+<tr><td class="pl">Focaldata / Financial Times</td><td class="sm">10-20</td><td class="sm">1,594 LV</td><td class="num d">53</td><td class="num r">44</td><td class="num d"><b>D+9</b></td></tr>
+<tr><td class="pl">Focaldata / Financial Times<span class="flag">alternate version</span></td><td class="sm">10-20</td><td class="sm">1,648 RV</td><td class="num d">51</td><td class="num r">41</td><td class="num d"><b>D+10</b></td></tr>
+<tr><td class="pl">Focaldata / Financial Times<span class="flag">alternate version</span></td><td class="sm">10-20</td><td class="sm">1,845 A</td><td class="num d">49</td><td class="num r">40</td><td class="num d"><b>D+9</b></td></tr>
+<tr><td class="pl">The Rainey Center</td><td class="sm">10-20</td><td class="sm">1,279 RV</td><td class="num d">52</td><td class="num r">44</td><td class="num d"><b>D+8</b></td></tr></tbody></table>
+<p class="sm" style="margin-top:12px">Alternate population versions of the same survey are flagged and excluded from the averages.</p>
+</div>
+<div class="card"><h3>Published averages</h3>
+<table><thead><tr><th style="width:18%">Source</th><th style="width:10%">Updated</th><th style="width:20%">Shares</th><th class="num" style="width:10%">Margin</th><th style="width:42%">Method</th></tr></thead>
+<tbody><tr><td class="pl">Silver Bulletin</td><td class="sm">Oct 30</td><td class="sm">D 50.0 · R 41.1</td><td class="num d"><b>D+8.9</b></td><td class="sm">House-effects adjusted; D+9.1 with likely-voter adjustment. No newer release before the election.</td></tr>
+<tr><td class="pl">PollCheck</td><td class="sm">Oct 30</td><td class="sm">D 50.8 · R 42.2</td><td class="num d"><b>D+8.6</b></td><td class="sm">Recency- and grade-weighted</td></tr>
+<tr><td class="pl">Call the Map (blend)</td><td class="sm">Oct 30</td><td class="sm">—</td><td class="num d"><b>D+8.4</b></td><td class="sm">Published blend</td></tr>
+<tr><td class="pl">Poliwave</td><td class="sm">Oct 30</td><td class="sm">D 52.0 · R 44.0</td><td class="num d"><b>D+8.0</b></td><td class="sm">Average across 99 pollsters</td></tr>
+<tr><td class="pl">Call the Map</td><td class="sm">Oct 30</td><td class="sm">—</td><td class="num d"><b>D+7.8</b></td><td class="sm">Raw polling average</td></tr>
+<tr><td class="pl">On Point Politics</td><td class="sm">Nov 1</td><td class="sm">—</td><td class="num d"><b>D+12.0</b></td><td class="sm">352 polls, daily weighted — the high outlier</td></tr></tbody></table>
+<div class="callout" style="margin-top:16px"><b>Read this as D+9.0.</b> On Point's D+12.0 is a genuine outlier on the
+high side; Call the Map's D+7.8 is the low. Four of the six readings sit between D+8.0 and D+8.9 — the
+12.0 is doing most of the work in the range.</div>
+</div>
+</div>
+
+<h2><span class="num">04</span>Senate &mdash; the only open question</h2>
+<p class="lede">Democrats need a net +4 for 51 seats, or +3 to reach 50 and rely on the vice presidency. On current
+averages they get exactly four &mdash; North Carolina, Maine, Texas and Ohio &mdash; and lose none.</p>
+<div class="callout warn"><b>Five races sit inside 1.5 points:</b> Kansas, Alaska, Iowa, Maine and Texas &mdash; with Ohio at 1.7.
+Win three and Democrats reach 50; win four and they reach 51 without the White House. Everything else on the Senate
+map is settled to within polling error.</div>
+<div class="card">
+<table><thead><tr><th>State</th><th class="ctr">Holder</th><th>Democrat</th><th>Republican</th><th class="num">Avg margin</th><th>Rating</th></tr></thead>
+<tbody><tr><td class="pl">DE</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Chris Coons</td><td class="sm">Michael Katz</td><td class="num d"><b>D+31.9</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">MA</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Ed Markey</td><td class="sm">John Deaton</td><td class="num d"><b>D+30.7</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">RI</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Jack Reed</td><td class="sm">Raymond McKay</td><td class="num d"><b>D+30.3</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">OR</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Jeff Merkley</td><td class="sm">David Brock Smith</td><td class="num d"><b>D+29.8</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">NJ</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Cory Booker</td><td class="sm">Justin Murphy</td><td class="num d"><b>D+24.7</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">CO</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">John Hickenlooper</td><td class="sm">Mark Baisley</td><td class="num d"><b>D+24.4</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">VA</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Mark Warner</td><td class="sm">Bert Mizusawa</td><td class="num d"><b>D+23</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">NM</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Ben Ray Lujan</td><td class="sm">Larry E. Marker</td><td class="num d"><b>D+17.6</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">IL</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Juliana Stratton</td><td class="sm">Don Tracy</td><td class="num d"><b>D+14.8</b></td><td><span class="pill d">Solid D</span></td></tr>
+<tr><td class="pl">NC</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Roy Cooper</td><td class="sm">Michael Whatley</td><td class="num d"><b>D+8.7</b></td><td><span class="pill d">Likely D</span></td></tr>
+<tr><td class="pl">GA</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Jon Ossoff</td><td class="sm">Mike Collins</td><td class="num d"><b>D+8.6</b></td><td><span class="pill d">Likely D</span></td></tr>
+<tr><td class="pl">NH</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Chris Pappas</td><td class="sm">John E. Sununu</td><td class="num d"><b>D+5</b></td><td><span class="pill d">Lean D</span></td></tr>
+<tr><td class="pl">MI</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Abdul El-Sayed</td><td class="sm">Mike Rogers</td><td class="num d"><b>D+3.6</b></td><td><span class="pill d">Tilt D</span></td></tr>
+<tr><td class="pl">MN</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Peggy Flanagan</td><td class="sm">Michele Tafoya</td><td class="num d"><b>D+3.4</b></td><td><span class="pill d">Tilt D</span></td></tr>
+<tr><td class="pl">OH</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Sherrod Brown</td><td class="sm">Jon Husted</td><td class="num d"><b>D+1.7</b></td><td><span class="pill d">Tilt D</span></td></tr>
+<tr><td class="pl">TX</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">James Talarico</td><td class="sm">Ken Paxton</td><td class="num d"><b>D+1.3</b></td><td><span class="pill t">Toss-up</span></td></tr>
+<tr><td class="pl">ME</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Troy Jackson</td><td class="sm">Susan Collins</td><td class="num d"><b>D+1.2</b></td><td><span class="pill t">Toss-up</span></td></tr>
+<tr><td class="pl">AK</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Mary Peltola</td><td class="sm">Dan S. Sullivan</td><td class="num d"><b>D+0.9</b></td><td><span class="pill t">Toss-up</span></td></tr>
+<tr><td class="pl">KS</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Adam Hamilton</td><td class="sm">Roger Marshall</td><td class="num d"><b>D+0.5</b></td><td><span class="pill t">Toss-up</span></td></tr>
+<tr><td class="pl">IA</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Josh Turek</td><td class="sm">Ashley Hinson</td><td class="num r"><b>R+0.9</b></td><td><span class="pill t">Toss-up</span></td></tr>
+<tr><td class="pl">NE</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Dan Osborn (I)</td><td class="sm">Pete Ricketts (R)</td><td class="num r"><b>R+1.5</b></td><td><span class="pill r">Tilt R</span></td></tr>
+<tr><td class="pl">SC</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Annie Andrews</td><td class="sm">Darline Graham</td><td class="num r"><b>R+1.7</b></td><td><span class="pill r">Tilt R</span></td></tr>
+<tr><td class="pl">FL</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Angie Nixon</td><td class="sm">Ashley Moody</td><td class="num r"><b>R+8.6</b></td><td><span class="pill r">Likely R</span></td></tr>
+<tr><td class="pl">MS</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Scott Colom</td><td class="sm">Cindy Hyde-Smith</td><td class="num r"><b>R+9</b></td><td><span class="pill r">Likely R</span></td></tr>
+<tr><td class="pl">ID</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Todd Achilles</td><td class="sm">Jim Risch</td><td class="num r"><b>R+9.6</b></td><td><span class="pill r">Likely R</span></td></tr>
+<tr><td class="pl">AR</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Hallie Shoffner</td><td class="sm">Tom Cotton</td><td class="num r"><b>R+12.1</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">KY</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Charles Booker</td><td class="sm">Andy Barr</td><td class="num r"><b>R+13.9</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">SD</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Brian Bengs</td><td class="sm">Mike Rounds</td><td class="num r"><b>R+15</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">LA</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Jamie Davis</td><td class="sm">Julia Letlow</td><td class="num r"><b>R+16.4</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">MT</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Alani Bankhead</td><td class="sm">Kurt Alme</td><td class="num r"><b>R+16.7</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">AL</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Everett Wess</td><td class="sm">Barry Moore</td><td class="num r"><b>R+17.9</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">OK</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">N&#x27;Kiyla Thomas</td><td class="sm">Kevin Hern</td><td class="num r"><b>R+22.6</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">TN</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Marquita Bradshaw</td><td class="sm">Bill Hagerty</td><td class="num r"><b>R+26.3</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">WY</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">James Byrd</td><td class="sm">Harriet Hageman</td><td class="num r"><b>R+31.4</b></td><td><span class="pill r">Solid R</span></td></tr>
+<tr><td class="pl">WV</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Rachel Fetty Anderson</td><td class="sm">Shelley Moore Capito</td><td class="num r"><b>R+34.6</b></td><td><span class="pill r">Solid R</span></td></tr></tbody></table>
+<p class="sm" style="margin-top:12px">Averages: Call the Map, latest edition per race (30 October – 1 November 2026). Rating bands derive from the margin
+(&lt;1.5 Toss-up, 1.5&ndash;4 Tilt, 4&ndash;8 Lean, 8&ndash;12 Likely, &gt;12 Solid).</p>
+</div>
+
+<h2><span class="num">05</span>Model disagreement</h2>
+<p class="lede">Four models, the same polling, very different answers. This is the most important table on the page:
+the uncertainty is in the assumptions, not just the data.</p>
+<div class="card">
+<table><thead><tr><th>Contest</th><th>Source</th><th class="num">Democratic chance</th><th>Expected outcome</th><th>As of</th></tr></thead>
+<tbody><tr><td class="pl">U.S. House</td><td>Call the Map</td><td class="num d"><b>83%</b></td><td class="sm">235.8 D seats; 80% range 214–259</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. House</td><td>Silver Bulletin (FLIPR)</td><td class="num d"><b>~95%</b></td><td class="sm">Net +25 seats</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. House</td><td>On Point Politics</td><td class="num d"><b>98%</b></td><td class="sm">251 D seats; 218 for control</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. House</td><td>Kalshi (traders)</td><td class="num d"><b>Same party both chambers 70%</b></td><td class="sm">No separate House control market open</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. Senate</td><td>On Point Politics</td><td class="num d"><b>88%</b></td><td class="sm">54.8 D seats (80% range 50–59); 51 for control</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. Senate</td><td>Call the Map</td><td class="num d"><b>59%</b></td><td class="sm">51.3 D-aligned seats; 80% range 47–56</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. Senate</td><td>Silver Bulletin (FLIPR)</td><td class="num d"><b>“Meaningful edge”</b></td><td class="sm">No topline outside the paywall</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">U.S. Senate</td><td>Kalshi (traders)</td><td class="num d"><b>No control market</b></td><td class="sm">D above 52 seats priced at 48%; 52 seats 19%</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">Governorships</td><td>On Point Politics</td><td class="num d"><b>89% D</b></td><td class="sm">23 of 36 lean D; up from 85% on 30 Oct</td><td class="sm">Nov 1</td></tr>
+<tr><td class="pl">Governorships</td><td>Call the Map</td><td class="num d"><b>25 D · 25 R</b></td><td class="sm">5 flips: AK, IA, OH, OR, KS</td><td class="sm">Oct 30</td></tr>
+<tr><td class="pl">State legislatures</td><td>On Point Politics</td><td class="num d"><b>45 of 87 lean D</b></td><td class="sm">6,143 seats up; 14 net flips to D, 1 to R</td><td class="sm">Nov 1</td></tr></tbody></table>
+</div>
+<div class="callout">A 29-point gap on Senate control between On Point (88%) and Call the Map (59%) is wider than
+the polling error either is trying to measure. Both are defensible; neither should be quoted alone.</div>
+
+<h2><span class="num">06</span>House</h2>
+<div class="grid2">
+<div class="card"><h3>Control</h3>
+<table><thead><tr><th>Measure</th><th class="num">Value</th></tr></thead><tbody>
+<tr><td class="pl">Democratic chance</td><td class="num d"><b>85&ndash;96%</b></td></tr>
+<tr><td class="pl">Expected seats</td><td class="num d"><b>235.8 D / 199.2 R</b></td></tr>
+<tr><td class="pl">80% seat range</td><td class="num">D 214&ndash;259</td></tr>
+<tr><td class="pl">Median outcome</td><td class="num">D 235, R 200</td></tr>
+<tr><td class="pl">Net change</td><td class="num d"><b>D +21</b></td></tr>
+<tr><td class="pl">Districts inside 5 points</td><td class="num">54</td></tr>
+<tr><td class="pl">Districts projected to flip</td><td class="num">29</td></tr>
+</tbody></table></div>
+<div class="card"><h3>Closest districts</h3>
+<table><thead><tr><th>District</th><th class="num">Avg margin</th></tr></thead><tbody>
+<tr><td class="pl">FL-25</td><td class="num d"><b>D+0.7</b></td></tr><tr><td class="pl">AZ-1</td><td class="num d"><b>D+3.8</b></td></tr><tr><td class="pl">CA-48</td><td class="num d"><b>D+5.4</b></td></tr><tr><td class="pl">CA-22</td><td class="num d"><b>D+8.5</b></td></tr><tr><td class="pl">MN-8</td><td class="num r"><b>R+6</b></td></tr><tr><td class="pl">CA-1</td><td class="num d"><b>D+15</b></td></tr>
+</tbody></table>
+<p class="sm" style="margin-top:12px">Four of the six tightest published averages are California districts.</p>
+</div>
+</div>
+
+<h2><span class="num">07</span>Governorships</h2>
+<p class="lede">36 races. The projection is an even <b>25&ndash;25</b> split &mdash; though more people would live under
+Democratic governors, 208.0M against 132.9M. Five seats change hands: Alaska, Iowa, Ohio, Oregon and Kansas.</p>
+<div class="card">
+<table><thead><tr><th>State</th><th class="ctr">Holder</th><th>Democrat</th><th>Republican</th><th class="num">Avg margin</th><th>Note</th></tr></thead>
+<tbody><tr><td class="pl">HI</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Josh Green</td><td class="sm">Gary Cordery</td><td class="num d"><b>D+37.1</b></td><td class="sm"></td></tr>
+<tr><td class="pl">MD</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Wes Moore</td><td class="sm">Dan Cox</td><td class="num d"><b>D+30.1</b></td><td class="sm"></td></tr>
+<tr><td class="pl">MA</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Maura Healey</td><td class="sm">Mike Minogue</td><td class="num d"><b>D+24.4</b></td><td class="sm"></td></tr>
+<tr><td class="pl">CA</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Xavier Becerra</td><td class="sm">Steve Hilton</td><td class="num d"><b>D+23.6</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">PA</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Josh Shapiro</td><td class="sm">Stacy Garrity</td><td class="num d"><b>D+22.6</b></td><td class="sm"></td></tr>
+<tr><td class="pl">AK</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Jonathan Kreiss-Tomkins</td><td class="sm">Bernadette Wilson</td><td class="num d"><b>D+22.3</b></td><td class="sm"></td></tr>
+<tr><td class="pl">CO</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Phil Weiser</td><td class="sm">Victor Marx</td><td class="num d"><b>D+21.3</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">IL</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">JB Pritzker</td><td class="sm">Darren Bailey</td><td class="num d"><b>D+20.1</b></td><td class="sm"></td></tr>
+<tr><td class="pl">CT</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Ned Lamont</td><td class="sm">Ryan Fazio</td><td class="num d"><b>D+18.2</b></td><td class="sm"></td></tr>
+<tr><td class="pl">RI</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Helena Foulkes</td><td class="sm">Ken Block</td><td class="num d"><b>D+15.3</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">NY</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Kathy Hochul</td><td class="sm">Bruce Blakeman</td><td class="num d"><b>D+11.9</b></td><td class="sm"></td></tr>
+<tr><td class="pl">ME</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Hannah Pingree</td><td class="sm">Robert Charles</td><td class="num d"><b>D+10.3</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">MN</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Amy Klobuchar</td><td class="sm">Lisa Demuth</td><td class="num d"><b>D+9.2</b></td><td class="sm"></td></tr>
+<tr><td class="pl">NM</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Deb Haaland</td><td class="sm">Greggory D. Hull</td><td class="num d"><b>D+7</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">MI</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Jocelyn Benson</td><td class="sm">John James</td><td class="num d"><b>D+6.6</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">IA</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Rob Sand</td><td class="sm">Zach Lahn</td><td class="num d"><b>D+6.3</b></td><td class="sm">open — flip</td></tr>
+<tr><td class="pl">AZ</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Katie Hobbs</td><td class="sm">Andy Biggs</td><td class="num d"><b>D+6.1</b></td><td class="sm"></td></tr>
+<tr><td class="pl">WI</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">David Crowley</td><td class="sm">Tom Tiffany</td><td class="num d"><b>D+2.6</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">OH</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Amy Acton</td><td class="sm">Vivek Ramaswamy</td><td class="num d"><b>D+0.9</b></td><td class="sm">open — flip</td></tr>
+<tr><td class="pl">OR</td><td class="ctr"><span class="pill d">D</span></td><td class="sm">Tina Kotek</td><td class="sm">Christine Drazan</td><td class="num r"><b>R+1</b></td><td class="sm">flip</td></tr>
+<tr><td class="pl">GA</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Keisha Lance Bottoms</td><td class="sm">Rick Jackson</td><td class="num r"><b>R+2</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">NV</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Aaron Ford</td><td class="sm">Joe Lombardo</td><td class="num r"><b>R+3.1</b></td><td class="sm"></td></tr>
+<tr><td class="pl">KS</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Cindy Holscher</td><td class="sm">Ty Masterson</td><td class="num r"><b>R+5</b></td><td class="sm">open — flip</td></tr>
+<tr><td class="pl">TX</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Gina Hinojosa</td><td class="sm">Greg Abbott</td><td class="num r"><b>R+5.4</b></td><td class="sm"></td></tr>
+<tr><td class="pl">NE</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Lynne Walz</td><td class="sm">Jim Pillen</td><td class="num r"><b>R+5.8</b></td><td class="sm"></td></tr>
+<tr><td class="pl">FL</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">David Jolly</td><td class="sm">Byron Donalds</td><td class="num r"><b>R+7</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">VT</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Amanda Janoo</td><td class="sm">Phil Scott</td><td class="num r"><b>R+7.2</b></td><td class="sm"></td></tr>
+<tr><td class="pl">OK</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Cyndi Munson</td><td class="sm">Mike Mazzei</td><td class="num r"><b>R+8.9</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">AL</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Doug Jones</td><td class="sm">Tommy Tuberville</td><td class="num r"><b>R+11.5</b></td><td class="sm"></td></tr>
+<tr><td class="pl">NH</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">—</td><td class="sm">—</td><td class="num r"><b>R+13.4</b></td><td class="sm">no competitive Democratic nominee filed</td></tr>
+<tr><td class="pl">TN</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Jerri Green</td><td class="sm">Marsha Blackburn</td><td class="num r"><b>R+13.8</b></td><td class="sm">open</td></tr>
+<tr><td class="pl">SC</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Jermaine Johnson</td><td class="sm">Alan Wilson</td><td class="num r"><b>R+14.1</b></td><td class="sm"></td></tr>
+<tr><td class="pl">AR</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Fredrick Love</td><td class="sm">Sarah Huckabee Sanders</td><td class="num r"><b>R+18.5</b></td><td class="sm"></td></tr>
+<tr><td class="pl">ID</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Terri Pickens</td><td class="sm">Brad Little</td><td class="num r"><b>R+21.5</b></td><td class="sm"></td></tr>
+<tr><td class="pl">SD</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Dan Ahlers</td><td class="sm">Larry Rhoden</td><td class="num r"><b>R+21.8</b></td><td class="sm"></td></tr>
+<tr><td class="pl">WY</td><td class="ctr"><span class="pill r">R</span></td><td class="sm">Kenneth Casner</td><td class="sm">Eric Barlow</td><td class="num r"><b>R+28.6</b></td><td class="sm">open</td></tr></tbody></table>
+</div>
+<div class="callout warn"><b>The gap that closed:</b> the market/model split on Nevada and Georgia has narrowed sharply. Kalshi now
+has Ford at 74% in Nevada and Bottoms at 68% in Georgia, where the model had both as Republican leans a week
+ago. South Carolina is now the outlier instead.</div>
+
+<h2><span class="num">08</span>State legislatures</h2>
+<p class="lede">87 chambers, 6,143 seats, 5,717 districts. Democrats hold 31 chambers today; they are projected to
+hold <b>43.6</b> after November 3, with <b>45</b> favoured and <b>14</b> net flips.</p>
+<div class="card"><h3>The nine chambers in play</h3>
+<table><thead><tr><th>State</th><th>Chamber</th><th class="ctr">Held</th><th class="num">D win %</th><th class="num">Avg D</th><th class="num">Avg R</th><th class="num">For majority</th><th>Path</th></tr></thead>
+<tbody><tr><td class="pl">Georgia</td><td>House</td><td class="ctr"><span class="pill r">R</span></td><td class="num d"><b>52%</b></td><td class="num sm">91</td><td class="num sm">89</td><td class="num sm">91</td><td class="sm">GOP needs 91 of 180; Democrats need a net +3</td></tr>
+<tr><td class="pl">North Carolina</td><td>House</td><td class="ctr"><span class="pill r">R</span></td><td class="num d"><b>58%</b></td><td class="num sm">62</td><td class="num sm">58</td><td class="num sm">61</td><td class="sm">GOP needs 61 of 120; Democrats need a net +3</td></tr>
+<tr><td class="pl">Arizona</td><td>House</td><td class="ctr"><span class="pill r">R</span></td><td class="num d"><b>59%</b></td><td class="num sm">31</td><td class="num sm">29</td><td class="num sm">31</td><td class="sm">GOP needs 31 of 60; dead heat at the threshold</td></tr>
+<tr><td class="pl">Wisconsin</td><td>Assembly</td><td class="ctr"><span class="pill r">R</span></td><td class="num d"><b>68%</b></td><td class="num sm">51</td><td class="num sm">48</td><td class="num sm">50</td><td class="sm">Democrats need 50 of 99</td></tr>
+<tr><td class="pl">Texas</td><td>House</td><td class="ctr"><span class="pill r">R</span></td><td class="num r"><b>22%</b></td><td class="num sm">72</td><td class="num sm">79</td><td class="num sm">76</td><td class="sm">Democrats need 76 of 150; long-shot but alive</td></tr>
+<tr><td class="pl">North Carolina</td><td>Senate</td><td class="ctr"><span class="pill r">R</span></td><td class="num r"><b>18%</b></td><td class="num sm">24</td><td class="num sm">26</td><td class="num sm">26</td><td class="sm">Half the chamber up; GOP holds 26–24 edge</td></tr>
+<tr><td class="pl">Alaska</td><td>House</td><td class="ctr"><span class="pill r">R</span></td><td class="num d"><b>89%</b></td><td class="num sm">18</td><td class="num sm">19</td><td class="num sm">21</td><td class="sm">20-member coalition House; 21 needed outright — unlikely</td></tr>
+<tr><td class="pl">New Hampshire</td><td>Senate</td><td class="ctr"><span class="pill r">R</span></td><td class="num d"><b>91%</b></td><td class="num sm">17</td><td class="num sm">8</td><td class="num sm">13</td><td class="sm">24-seat chamber; Democrats need 13</td></tr>
+<tr><td class="pl">Georgia</td><td>Senate</td><td class="ctr"><span class="pill r">R</span></td><td class="num r"><b>8%</b></td><td class="num sm">26</td><td class="num sm">30</td><td class="num sm">28</td><td class="sm">Democrats would need to run the table</td></tr></tbody></table></div>
+<div class="card" style="margin-top:16px"><h3>Projected to change hands</h3>
+<table><thead><tr><th>State</th><th>Chamber</th><th class="ctr">Flip</th><th class="num">D win %</th><th class="num">Seats</th><th>Note</th></tr></thead>
+<tbody><tr><td class="pl">Arizona</td><td>Senate</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>93%</b></td><td class="num sm">17–13</td><td class="sm">Democratic trifecta hinges on this chamber</td></tr>
+<tr><td class="pl">Arizona</td><td>House</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>59%</b></td><td class="num sm">31–29</td><td class="sm">Dead heat</td></tr>
+<tr><td class="pl">Michigan</td><td>House</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>93%</b></td><td class="num sm">58–52</td><td class="sm">First test of the new maps</td></tr>
+<tr><td class="pl">Minnesota</td><td>House</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>97%</b></td><td class="num sm">73–61</td><td class="sm">Democratic trifecta restored</td></tr>
+<tr><td class="pl">Wisconsin</td><td>Senate</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>98%</b></td><td class="num sm">21–12</td><td class="sm">Only one seat needed; 17 seats up</td></tr>
+<tr><td class="pl">Wisconsin</td><td>Assembly</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>68%</b></td><td class="num sm">51–48</td><td class="sm">Lean D — the sleeper chamber</td></tr>
+<tr><td class="pl">New Hampshire</td><td>House</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>99%</b></td><td class="num sm">203–197</td><td class="sm">400 members; landslide-scale swings only</td></tr>
+<tr><td class="pl">New Hampshire</td><td>Senate</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>91%</b></td><td class="num sm">17–8</td><td class="sm">Six-seat Democratic gain needed</td></tr>
+<tr><td class="pl">Pennsylvania</td><td>House</td><td class="ctr"><span class="pill d">D &rarr; D</span></td><td class="num d"><b>94%</b></td><td class="num sm">105–98</td><td class="sm">Democratic hold, not a flip — closest defensive battle</td></tr>
+<tr><td class="pl">Alaska</td><td>House</td><td class="ctr"><span class="pill r">R &rarr; D</span></td><td class="num d"><b>89%</b></td><td class="num sm">18–19</td><td class="sm">Coalition arithmetic, not a clean majority</td></tr>
+<tr><td class="pl">West Virginia</td><td>Senate</td><td class="ctr"><span class="pill r">R &rarr; R</span></td><td class="num r"><b>0%</b></td><td class="num sm">3–31</td><td class="sm">The one projected Republican flip, from a Democratic-held seat</td></tr></tbody></table>
+<p class="sm" style="margin-top:12px">A second model, 99chambers, counts 89 chambers and disagrees sharply on the
+Arizona Senate &mdash; On Point gives Democrats 93%, 99chambers gives Republicans 55%. Treat Arizona as genuinely uncertain.</p>
+</div>
+
+<footer>
+<p><b>Sources, with the date each was last read:</b> Call the Map — House, Senate, governor and state
+forecasts and poll archive, editions of <b>1 November</b> (race averages) and <b>30 October</b> (national generic-ballot
+average, published blend, governors); Silver Bulletin — generic-ballot average of <b>30 October</b>, FLIPR forecast
+updated <b>1 November</b>; On Point Politics — forecast, race averages and generic ballot of <b>1 November</b>, state
+legislatures model of <b>30 October</b>; PollCheck generic-ballot average and Poliwave averages, both <b>30 October</b>;
+Kalshi via Kalshi View, snapshot of <b>1 November</b>; 99chambers legislatures of <b>30 October</b>; Ballotpedia and
+MultiState for filings and chamber control, <b>2 November</b>.</p>
+<p><b>On the dating:</b> no forecaster published a new national generic-ballot average between 30 October and the
+election, so the national figures carry their 30 October date rather than today's. Race-level averages and the
+forecast toplines are the 1 November editions. Michigan and South Carolina polls run to <b>1 November</b>.</p>
+<p><b>Caveats:</b> No probability on this page is computed here &mdash; every percentage is a published number from a
+named model or market. Wedgewood Polls remains excluded after being banned on 23 October for fabricating most of its
+data. Margins are Democratic minus Republican. Derived ratings are marked as such in the workbook.</p>
+</footer>
+</div>
+</body></html>
